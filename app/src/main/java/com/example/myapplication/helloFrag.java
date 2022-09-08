@@ -34,18 +34,10 @@ public class helloFrag extends Fragment {
         View myView = inflater.inflate(R.layout.fragment_hello, container, false);
         mViewModel = new ViewModelProvider(requireActivity()).get(HelloViewModel.class);
         Button  btn1 = myView.findViewById(R.id.button2);
-//        TextView tv1 = null;
-//        mViewModel.getItemLD().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                tv1.setText("Parameter1: " +s);
-//            }
-//        });
         EditText texts = myView.findViewById(R.id.editTextTextPersonName);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                hey maybe get the data
                 mViewModel.setItem(texts.getText().toString());
                 if (texts.getText().toString().compareTo("Tarnished") == 0){
                     Toast.makeText(requireContext(),"YOU DIED", Toast.LENGTH_SHORT).show();
@@ -58,12 +50,3 @@ public class helloFrag extends Fragment {
         return myView;
 } }
 
-
-//hey when you're in a frag, do the require context. In main activity, do getApplicationContext
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//        mViewModel = new ViewModelProvider(this).get(HelloViewModel.class);
-//        // TODO: Use the ViewModel
-//    }
-//three methods. prob use

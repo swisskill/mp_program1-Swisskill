@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager;
 
         fragmentManager = getSupportFragmentManager();
-        //setup the mainFragment to show.
         fragmentManager.beginTransaction().add(R.id.container, new helloFrag()).commit();
         HelloViewModel mViewModel;
 
@@ -28,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         mViewModel.getItemLD().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String v) {
-//                tv1.setText("Parameter1: " +v);
                 Log.d("mViewModel observed name ", v);
             }
 
@@ -36,11 +34,6 @@ public class MainActivity extends AppCompatActivity {
         //you need to declare and get viewmodel running
         //set up an observer as well
 
-
-
-//        TextView myView;
-//        myView = findViewById(R.id.textview);
-//        myView.setText("hello ere?");
     }
 }
 

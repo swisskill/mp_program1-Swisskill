@@ -7,8 +7,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.LiveData;
 
 public class HelloViewModel extends ViewModel {
-    // TODO: Implement the ViewModel
-    //maybe the id thing? no clue
+
     private MutableLiveData<String> item = new MutableLiveData<String>();
 
     LiveData<String> getItemLD() {
