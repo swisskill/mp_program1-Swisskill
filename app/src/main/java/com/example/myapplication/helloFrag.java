@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class helloFrag extends Fragment {
 
@@ -23,14 +25,21 @@ public class helloFrag extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_hello, container, false);
-    }
+        View myView = inflater.inflate(R.layout.fragment_hello, container, false);
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(HelloViewModel.class);
-        // TODO: Use the ViewModel
-    }
+        Button  btn1 = myView.findViewById(R.id.editTextTextPersonName);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Hello (name?)", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return myView;
+//    @Override
+//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+//        super.onActivityCreated(savedInstanceState);
+//        mViewModel = new ViewModelProvider(this).get(HelloViewModel.class);
+//        // TODO: Use the ViewModel
+//    }
 
-}
+} }
