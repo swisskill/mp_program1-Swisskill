@@ -41,7 +41,10 @@ public class helloFrag extends Fragment {
                 mViewModel.setItem(texts.getText().toString());
                 if (texts.getText().toString().compareTo("Tarnished") == 0){
                     Toast.makeText(requireContext(),"YOU DIED", Toast.LENGTH_SHORT).show();
-                } else {
+                } else if (texts.getText().toString().compareTo("") == 0) {
+                    Toast.makeText(requireContext(),"Hello World!", Toast.LENGTH_SHORT).show();
+                }
+                else {
                     Toast.makeText(requireContext(), "Hello " + texts.getText().toString(), Toast.LENGTH_SHORT).show();
                 }
                 Log.d("mViewModel observed name ", texts.getText().toString());
