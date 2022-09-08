@@ -1,6 +1,10 @@
 package com.example.myapplication;
 
+import android.util.Log;
+
 import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.LiveData;
 
 public class HelloViewModel extends ViewModel {
     // TODO: Implement the ViewModel
