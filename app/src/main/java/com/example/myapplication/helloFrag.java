@@ -27,14 +27,16 @@ public class helloFrag extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View myView = inflater.inflate(R.layout.fragment_hello, container, false);
 
-        Button  btn1 = myView.findViewById(R.id.editTextTextPersonName);
+        Button  btn1 = myView.findViewById(R.id.button2);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Hello (name?)", Toast.LENGTH_SHORT).show();
+                name.HelloViewModel = //the text that was in the text box
+                Toast.makeText(requireContext(),"Hello (name?)", Toast.LENGTH_SHORT).show();
             }
         });
         return myView;
+        //hey when you're in a frag, do the require context. In main activity, do getApplicationContext
 //    @Override
 //    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 //        super.onActivityCreated(savedInstanceState);
