@@ -1,3 +1,5 @@
+Points: 20/20
+
 # Program # 1
 
 ## Course: 
