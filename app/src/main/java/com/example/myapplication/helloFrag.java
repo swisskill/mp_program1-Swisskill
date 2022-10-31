@@ -48,6 +48,7 @@ public class helloFrag extends Fragment {
                     //Toast.makeText(requireContext(),"YOU DIED", Toast.LENGTH_SHORT).show();
                     imageView.setImageResource(R.drawable.img);
                     btn1.setVisibility(myView.GONE);
+                    texts.setVisibility(myView.GONE);
                 } else if (texts.getText().toString().compareTo("") == 0) {
                     Toast.makeText(requireContext(),"Hello World!", Toast.LENGTH_SHORT).show();
                 }
